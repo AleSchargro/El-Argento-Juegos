@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Argento: Juegos</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <p class="dateline" id="dateline"></p>
+  <h1>El Argento</h1>
+  <p class="tagline">Juegos argentinos, uno nuevo cada día.</p>
+</header>
+
+<main>
+  <ul class="game-list">
+    <li>
+      <a class="game-row active" href="conexiones.html">
+        <div>
+          <div class="game-name">Conexiones</div>
+          <div class="game-desc">Encontrá los cuatro grupos de cuatro.</div>
+        </div>
+        <div class="game-status">Jugar →</div>
+      </a>
+    </li>
+    <li>
+      <div class="game-row disabled">
+        <div>
+          <div class="game-name">Tachero</div>
+          <div class="game-desc">Manejá un taxi por Buenos Aires.</div>
+        </div>
+        <div class="game-status">Próximamente</div>
+      </div>
+    </li>
+  </ul>
+</main>
+
+<script>
+  const dateEl = document.getElementById('dateline');
+  const today = new Date();
+  dateEl.textContent = today.toLocaleDateString('es-AR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+</script>
+
+</body>
+</html>
