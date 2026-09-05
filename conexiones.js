@@ -183,6 +183,10 @@ function reshuffleTiles() {
   shuffle(allWords);
   render();
 }
+const howToPlay = document.getElementById("howToPlay");
+howToPlay.classList.add("show");
+document.getElementById("closeHowToPlay").addEventListener("click", () => howToPlay.classList.remove("show"));
+document.getElementById("openHowToPlay").addEventListener("click", () => howToPlay.classList.add("show"));
 
 submitBtn.addEventListener("click", submit);
 document.getElementById("resetBtn").addEventListener("click", resetSelection);

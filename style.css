@@ -114,6 +114,78 @@ main{
   border-bottom: 1px solid var(--ink-soft);
 }
 
+
+.link-btn{
+  display: block;
+  background: none;
+  border: none;
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--ink-soft);
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.modal-overlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(28,63,96,0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+  z-index: 20;
+}
+
+.modal-overlay.show{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-panel{
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  max-width: 420px;
+  padding: 28px;
+  font-family: var(--sans);
+}
+
+.modal-panel h2{
+  font-family: var(--serif);
+  margin: 0 0 12px;
+}
+
+.modal-panel p{
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+.example-label{
+  font-weight: 600;
+  color: var(--ink) !important;
+  margin-top: 20px !important;
+}
+
+.example-row{
+  border: 1px solid var(--paper-line);
+  padding: 8px 10px;
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+.example-row .example-cat{
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+}
+
 /* Conexiones */
 .grid{
   display: grid;

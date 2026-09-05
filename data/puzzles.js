@@ -18,6 +18,14 @@ const PUZZLES = {
       { name: "Apodos de presidentes Argentinos", words: ["Zorro", "Viejo", "Chupete", "Pingüino"] },
       { name: "Apellidos de personajes interpretados por Guillermo Francella", words: ["Basurto", "Argento", "Guerrero", "Scarpelli"] }
     ]
+  },
+  "2026-09-06": {
+    categories: [
+      { name: "Canciones de 'Los Piojos'", words: ["Tan Solo", "El Farolito", "Ruleta", "Civilización"] },
+      { name: "Ciudades de Santa Fé", words: ["Rosario", "Rafaela", "San Lorenzo", "Santo Tomé"] },
+      { name: "Teatros", words: ["Opera", "Metropolitan", "Astros", "Colón"] },
+      { name: "Golondrina ____", words: ["Doméstica", "Ceja Blanca", "Barranquera", "Patagónica"] }
+    ]
   }
 };
 

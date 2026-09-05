@@ -8,12 +8,33 @@
 </head>
 <body>
 
+<body>
+
+<div class="modal-overlay" id="howToPlay">
+  <div class="modal-panel">
+    <h2>¿Cómo se juega?</h2>
+    <p>Hay 16 palabras que forman <strong>4 categorías secretas</strong> de 4 palabras cada una. Tenés que encontrar las cuatro.</p>
+    <p>Si te equivocás, perdés un intento. Tenés 4 intentos en total.</p>
+    <p>Ojo: algunas palabras parecen encajar en más de un grupo a propósito.</p>
+    <p class="example-label">Dos ejemplos de cómo se ven las categorías una vez resueltas:</p>
+    <div class="example-row">
+      <div class="example-cat">Apodos de jugadores argentinos</div>
+      <div class="example-words">KUN · DIEGO · PULGA · FIDEO</div>
+    </div>
+    <div class="example-row">
+      <div class="example-cat">HORMIGA _____</div>
+      <div class="example-words">ARGENTINA · CARPINTERA · NEGRA COMÚN · TIGRE</div>
+    </div>
+    <button class="submit" id="closeHowToPlay">Entendido, ¡a jugar!</button>
+  </div>
+</div>
+
 <header class="masthead">
   <p class="dateline">El Argento</p>
   <h1>Conexiones</h1>
   <p class="tagline">Encontrá los cuatro grupos de cuatro palabras relacionadas.</p>
+  <button class="link-btn" id="openHowToPlay">¿Cómo se juega?</button>
 </header>
-
 <main>
   <div id="solved" class="solved"></div>
   <div id="grid" class="grid"></div>
