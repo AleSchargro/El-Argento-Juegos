@@ -19,6 +19,16 @@ const triesEl = document.getElementById("tries");
 const submitBtn = document.getElementById("submitBtn");
 const messageEl = document.getElementById("message");
 
+let toastTimeout = null;
+function showToast(text, persist = false) {
+  clearTimeout(toastTimeout);
+  messageEl.textContent = text;
+  messageEl.classList.add("show");
+  if (!persist) {
+    toastTimeout = setTimeout(() => messageEl.classList.remove("show"), 1600);
+  }
+}
+
 function shuffle(arr) {
   for (let i = arr.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -92,7 +102,7 @@ function playCorrect(categoryOfSelected) {
     tile.style.color = "#fff";
     tile.classList.add("correct-flash");
   });
-  messageEl.textContent = "¡Correcto!";
+  showToast("¡Correcto!");
  
   setTimeout(() => {
     solvedCategories.push(categoryOfSelected);
@@ -102,7 +112,7 @@ function playCorrect(categoryOfSelected) {
     render();
  
     if (solvedCategories.length === puzzle.categories.length) {
-      messageEl.textContent = "¡Ganaste! Resolviste las cuatro categorías.";
+      showToast("¡Ganaste! Resolviste las cuatro categorías.", true);
       submitBtn.disabled = true;
     }
   }, 500);
@@ -113,7 +123,7 @@ function playWrong(categoryOfSelected) {
   const tiles = getSelectedTiles();
   tiles.forEach(tile => tile.classList.add("shake", "wrong"));
  
-  messageEl.textContent = oneAway ? "Solo falta una..." : "No es esa combinación.";
+  showToast(oneAway ? "Solo falta una..." : "No es esa combinación.");
  
   setTimeout(() => {
     triesLeft -= 1;
@@ -122,7 +132,7 @@ function playWrong(categoryOfSelected) {
  
     if (triesLeft === 0) {
       revealAll();
-      messageEl.textContent = "Se acabaron los intentos. Estas eran las categorías.";
+      showToast("Se acabaron los intentos. Estas eran las categorías.", true);
       submitBtn.disabled = true;
     } else {
       render();

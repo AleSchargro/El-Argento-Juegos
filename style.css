@@ -268,14 +268,27 @@ button.submit:disabled{
   cursor: default;
 }
 
-.message{
-  min-height: 20px;
+.toast{
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+  background: var(--ink);
+  color: var(--paper);
   font-family: var(--sans);
-  font-size: 13px;
-  color: var(--ink-soft);
-  margin-top: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 22px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s;
+  z-index: 10;
 }
 
+.toast.show{
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
 .coming-soon{
   margin-top: 40px;
   padding: 40px 0;
