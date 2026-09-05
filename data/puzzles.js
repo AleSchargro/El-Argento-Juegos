@@ -13,10 +13,10 @@ const PUZZLES = {
   },
   "2026-09-05": {
     categories: [
-      { name: "Tu categoría 1", words: ["A", "B", "C", "D"] },
-      { name: "Tu categoría 2", words: ["E", "F", "G", "H"] },
-      { name: "Tu categoría 3", words: ["I", "J", "K", "L"] },
-      { name: "Tu categoría 4", words: ["M", "N", "O", "P"] }
+      { name: "Apodos de personajes de OKUPAS", words: ["Mulo", "Chiqui", "Negro", "Pollo"] },
+      { name: "Canciones de Charly García", words: ["Mientes", "Vampiro", "Intuición", "LLuvia"] },
+      { name: "Apodos de presidentes Argentinos", words: ["Zorro", "Viejo", "Chupete", "Pingüino"] },
+      { name: "Apellidos de personajes interpretados por Guillermo Francella", words: ["Basurto", "Argento", "Guerrero", "Scarpelli"] }
     ]
   }
 };
