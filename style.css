@@ -154,6 +154,22 @@ main{
   animation: shake 0.4s;
 }
 
+.tile.wrong{
+  background: #B9BBB2;
+  border-color: #B9BBB2;
+  color: var(--paper);
+}
+
+.tile.correct-flash{
+  animation: correctPulse 0.5s;
+}
+
+@keyframes correctPulse{
+  0%{ transform: scale(1); }
+  35%{ transform: scale(1.06); }
+  100%{ transform: scale(1); opacity: 0.15; }
+}
+
 @keyframes shake{
   0%,100%{ transform: translateX(0); }
   20%{ transform: translateX(-6px); }
@@ -197,6 +213,28 @@ main{
   margin-top: 20px;
   font-family: var(--sans);
   font-size: 14px;
+}
+
+.secondary-controls{
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+button.secondary{
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 13px;
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+button.secondary:hover{
+  background: var(--ink);
+  color: var(--paper);
 }
 
 .tries{

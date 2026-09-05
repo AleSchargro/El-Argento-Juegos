@@ -14,9 +14,9 @@ const PUZZLES = {
   "2026-09-05": {
     categories: [
       { name: "Tu categoría 1", words: ["A", "B", "C", "D"] },
-      { name: "Tu categoría 2", words: ["A", "B", "C", "D"] },
-      { name: "Tu categoría 3", words: ["A", "B", "C", "D"] },
-      { name: "Tu categoría 4", words: ["A", "B", "C", "D"] }
+      { name: "Tu categoría 2", words: ["E", "F", "G", "H"] },
+      { name: "Tu categoría 3", words: ["I", "J", "K", "L"] },
+      { name: "Tu categoría 4", words: ["M", "N", "O", "P"] }
     ]
   }
 };
@@ -25,6 +25,10 @@ const PUZZLES = {
 const FALLBACK_PUZZLE = PUZZLES["2026-09-04"];
 
 function getTodayKey() {
+  const params = new URLSearchParams(window.location.search);
+  const override = params.get("fecha");
+  if (override) return override;
+
   const d = new Date();
   const yyyy = d.getFullYear();
   const mm = String(d.getMonth() + 1).padStart(2, "0");
