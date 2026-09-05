@@ -186,6 +186,7 @@ function reshuffleTiles() {
 const howToPlay = document.getElementById("howToPlay");
 howToPlay.classList.add("show");
 document.getElementById("closeHowToPlay").addEventListener("click", () => howToPlay.classList.remove("show"));
+document.getElementById("closeHowToPlayX").addEventListener("click", () => howToPlay.classList.remove("show"));
 document.getElementById("openHowToPlay").addEventListener("click", () => howToPlay.classList.add("show"));
 
 submitBtn.addEventListener("click", submit);
