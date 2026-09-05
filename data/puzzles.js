@@ -14,7 +14,7 @@ const PUZZLES = {
   "2026-09-05": {
     categories: [
       { name: "Apodos de personajes de OKUPAS", words: ["Mulo", "Chiqui", "Negro", "Pollo"] },
-      { name: "Canciones de Charly García", words: ["Mientes", "Vampiro", "Intuición", "LLuvia"] },
+      { name: "Canciones de Charly García", words: ["Mientes", "Vampiro", "Intuición", "Lluvia"] },
       { name: "Apodos de presidentes Argentinos", words: ["Zorro", "Viejo", "Chupete", "Pingüino"] },
       { name: "Apellidos de personajes interpretados por Guillermo Francella", words: ["Basurto", "Argento", "Guerrero", "Scarpelli"] }
     ]
