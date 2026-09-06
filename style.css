@@ -20,8 +20,9 @@ body{
   color: var(--ink);
   font-family: var(--sans);
   min-height: 100vh;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
-
 .masthead{
   max-width: 640px;
   margin: 0 auto;
@@ -209,7 +210,7 @@ main{
 }
 
 .tile{
-  aspect-ratio: 1.4;
+  height: 64px;
   border: 2px solid var(--ink);
   background: var(--paper);
   color: var(--ink);
@@ -314,7 +315,7 @@ button.secondary{
   background: transparent;
   color: var(--ink);
   border: 1px solid var(--ink);
-  padding: 8px 16px;
+  padding: 7px 15px;
   cursor: pointer;
 }
 
@@ -325,7 +326,7 @@ button.secondary:hover{
 
 .tries{
   display: flex;
-  gap: 6px;
+  gap: 14px;
 }
 
 .try-dot{
@@ -401,4 +402,183 @@ button.submit:disabled{
   color: var(--ink-soft);
   max-width: 420px;
   margin: 0 auto;
+}
+
+/* Temazo */
+.player{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+.play-btn{
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  border: none;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.play-btn:active{
+  transform: scale(0.94);
+}
+
+.play-btn.playing{
+  animation: pulse 1.4s infinite;
+}
+
+@keyframes pulse{
+  0%{ box-shadow: 0 0 0 0 rgba(28,63,96,0.35); }
+  70%{ box-shadow: 0 0 0 16px rgba(28,63,96,0); }
+  100%{ box-shadow: 0 0 0 0 rgba(28,63,96,0); }
+}
+
+.play-btn:disabled{
+  background: var(--paper-line);
+  color: var(--ink-soft);
+  cursor: default;
+}
+
+.duration-label{
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+.player{
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.player + .tries{
+  justify-content: center;
+  margin: 24px 0;
+}
+
+.song-history{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.song-row{
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--ink-soft);
+  text-decoration: line-through;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--paper-line);
+}
+
+.song-row.correct{
+  color: var(--correct);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.reveal{
+  margin-top: 24px;
+  padding: 20px;
+  border: 2px solid var(--ink);
+}
+
+.reveal-title{
+  font-family: var(--serif);
+  font-size: 22px;
+  margin: 0;
+}
+
+.reveal-artist{
+  font-family: var(--sans);
+  color: var(--ink-soft);
+  margin: 4px 0 12px;
+}
+
+.play-btn{
+  width: 88px;
+  height: 88px;
+  font-size: 32px;
+}
+
+.duration-label{
+  font-size: 16px;
+}
+
+.autocomplete-wrap{
+  position: relative;
+  flex: 1;
+}
+
+#guessInput{
+  width: 100%;
+  font-family: var(--sans);
+  font-size: 16px;
+  padding: 12px 14px;
+  border: 2px solid var(--ink);
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.autocomplete-list{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  border-top: none;
+  max-height: 220px;
+  overflow-y: auto;
+  z-index: 15;
+  display: none;
+}
+
+.autocomplete-list.show{
+  display: block;
+}
+
+.autocomplete-item{
+  padding: 10px 12px;
+  font-family: var(--sans);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.autocomplete-item:hover{
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.guess-form{
+  gap: 20px;
+}
+
+.guess-form .submit{
+  padding: 8px 15px;
+  font-size: 13px;
+  margin-left: 2px;
+}
+
+.song-row.skipped{
+  text-decoration: none;
+  font-style: italic;
+}
+
+.guess-form button{
+  position: relative;
+  top: 2px;
+  right: 2px;
+}
+
+#skipBtn{
+  padding-bottom: 7px;
 }

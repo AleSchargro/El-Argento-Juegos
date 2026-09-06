@@ -131,9 +131,9 @@ function playWrong(categoryOfSelected) {
     isChecking = false;
  
     if (triesLeft === 0) {
-      revealAll();
-      showToast("Se acabaron los intentos. Estas eran las categorías.", true);
+      showToast("Se acabaron los intentos.");
       submitBtn.disabled = true;
+      revealRemaining();
     } else {
       render();
     }
@@ -166,10 +166,21 @@ function renderSolved() {
   });
 }
  
-function revealAll() {
-  solvedCategories = puzzle.categories.map(c => c.name);
-  renderSolved();
-  render();
+function revealRemaining() {
+  isChecking = true;
+  const remaining = puzzle.categories
+    .map(c => c.name)
+    .filter(name => !solvedCategories.includes(name));
+
+  function revealNext(index) {
+    if (index >= remaining.length) return;
+    solvedCategories.push(remaining[index]);
+    renderSolved();
+    render();
+    setTimeout(() => revealNext(index + 1), 700);
+  }
+
+  revealNext(0);
 }
  
 function resetSelection() {

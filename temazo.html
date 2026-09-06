@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Temazo — El argento</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <p class="dateline">El Argento</p>
+  <h1>Temazo </h1>
+  <p class="tagline">Escuchá el fragmento y adiviná la canción.</p>
+</header>
+
+<main>
+  <div class="player">
+    <button class="play-btn" id="playBtn" disabled>▶</button>
+    <div class="duration-label" id="durationLabel">0.1 seg</div>
+  </div>
+
+  <div class="tries" id="tries"></div>
+
+  <div class="guess-form">
+    <div class="autocomplete-wrap">
+      <input type="text" id="guessInput" placeholder="Escribí un título..." autocomplete="off">
+      <div class="autocomplete-list" id="autocompleteList"></div>
+    </div>
+    <button class="submit" id="guessBtn">Adivinar</button>
+    <button class="secondary" id="skipBtn">Saltear</button>
+  </div>
+
+  <p class="toast" id="message"></p>
+
+  <div id="guessHistory" class="song-history"></div>
+
+  <div id="reveal" class="reveal" style="display:none"></div>
+
+  <a class="back-link" href="index.html">← Volver</a>
+</main>
+
+<script src="data/canciones.js"></script>
+<script src="temazo.js"></script>
+
+</body>
+</html>
