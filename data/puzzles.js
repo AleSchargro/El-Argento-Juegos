@@ -26,6 +26,14 @@ const PUZZLES = {
       { name: "Teatros", words: ["Opera", "Metropolitan", "Astros", "Colón"] },
       { name: "Golondrina ____", words: ["Doméstica", "Ceja Blanca", "Barranquera", "Patagónica"] }
     ]
+  },
+  "2026-09-07": {
+    categories: [
+      { name: "Juegos tradicionales", words: ["TEG", "Estanciero", "Truco", "Sapo"] },
+      { name: "Golosinas tradicionales", words: ["Alfajor", "Turrón", "Rhodesia", "DRF"] },
+      { name: "Elementos típicos de gaucho", words: ["Poncho", "Rebenque", "Guitarra", "Rastra"] },
+      { name: "Nombre de cantantes de Tango", words: ["Tita", "Roberto", "Carlos", "Anibal"] }
+    ]
   }
 };
 
