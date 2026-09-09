@@ -53,10 +53,10 @@ const PUZZLES = {
   },
   "2026-09-10": {
     categories: [
-      { name: "Si estás leyendo esto, avisale a Alejo!", words: ["PRUEBA 1", "PRUEBA 2", "PRUEBA 3", "PRUEBA 4"] },
-      { name: "Categoría Prueba 2", words: ["PRUEBA 5", "PRUEBA 6", "PRUEBA 7", "PRUEBA 8"] },
-      { name: "Categoría Prueba 3", words: ["PRUEBA 9", "PRUEBA 10", "PRUEBA 11", "PRUEBA 12"] },
-      { name: "Categoría Prueba 4", words: ["PRUEBA 13", "PRUEBA 14", "PRUEBA 15", "PRUEBA 16"] }
+      { name: "Ensaladas", words: ["Rusa", "Tabule", "Frutas", "Verdes"] },
+      { name: "Marcas de mate mal escritas", words: ["Amando", "Origenes", "A merced", "Rosa monti"] },
+      { name: "Tipos de parque", words: ["Industrial", "Jardin", "Suelo de madera", "Temático"] },
+      { name: "Plata", words: ["Ag", "Dinero", "Lámina metálica", "Mardel"] }
     ]
   }
 };
