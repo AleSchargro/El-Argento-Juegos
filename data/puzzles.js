@@ -47,7 +47,7 @@ const PUZZLES = {
     categories: [
       { name: "Términos de básquet", words: ["Bandeja", "Triple", "Gancho", "Pantalla"] },
       { name: "Términos del truco que también son cotidianos", words: ["Mano", "Flor", "Falta", "Quiero"] },
-      { name: "Categoría Prueba 3", words: ["Rock & Roll", "Pick and Roll", "Benjamín Rollheiser", "Rollo de cocina"] },
+      { name: "Palabras con Roll", words: ["Rock & Roll", "Pick and Roll", "Benjamín Rollheiser", "Rollo de cocina"] },
       { name: "Maneras de referirse a puntaje", words: ["Punto", "Tanto", "Gol", "Poroto"] }
     ]
   },
